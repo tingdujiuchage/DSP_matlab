@@ -1,0 +1,11 @@
+n=0:100;
+x=cos(0.48*pi*n)+cos(0.52*pi*n);
+Xk=fft(x);
+subplot(211);
+stem(n,abs(Xk),'filled');
+xlabel('\Omega');
+title('幅度');
+subplot(212);
+stem(n,angle(Xk),'filled');
+xlabel('\Omega');
+title('相位');
